@@ -3,7 +3,7 @@ name: Deploy HTML CV to GitHub Pages
 on:
   push:
     branches:
-      - master  # Trigger action on push to master branch
+      - master  # Trigger action on push to the master branch
 
 jobs:
   build:
@@ -35,4 +35,3 @@ jobs:
 
     env:
       Git_Token: ${{ secrets.Git_Token }}  # Add the token as an environment variable
-
