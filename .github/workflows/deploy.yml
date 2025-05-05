@@ -3,7 +3,7 @@ name: Deploy HTML to GitHub Pages
 on:
   push:
     branches:
-      - master  # or 'main', depending on your repo
+      - master  # or 'main' if your default branch is main
 
 jobs:
   deploy:
@@ -16,5 +16,6 @@ jobs:
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
-          github_token: ${{ secrets.GIT_TOKEN }}
-          publish_dir: .  # or './public' if your site files are in /public
+          personal_token: ${{ secrets.Git_Token }}
+          publish_dir: .  # Use './public' if your site files are inside a subfolder
+          enable_jekyll: false
